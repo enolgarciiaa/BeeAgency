@@ -1,0 +1,269 @@
+/*Le damos estilos generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos container1*/
+.container1{
+    display: flex;
+    justify-content: space-around;
+    background:linear-gradient(rgb(255, 255, 255), rgb(128, 125, 125));
+    padding: 10px;
+    align-items: center;
+    position: sticky;
+    z-index: 1;
+}
+      
+
+
+/*Estilos a nuestros componentes*/
+
+h2 a{
+    font-size: 4.5rem;
+}
+
+.menu{
+    display: flex;
+    gap: 50px;
+    background-color: rgb(253, 253, 253);
+    padding: 15px;
+    border: 1px  black;
+    border-radius: 30px;
+    list-style: none;
+}
+
+/*Estilos submenu de servicios*/
+
+.submenu {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    position: absolute;
+    background: #000000;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 210px;
+    display: none;
+}
+.submenu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.submenu li a{
+    color: white;
+}
+
+.submenu a:hover {
+    color: rgb(226, 143, 17);
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.menu li a:hover{
+    color: rgb(226, 143, 17);
+    font-size: 1.4rem;
+}
+
+.logo-redes img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+
+/*Menú responsive*/
+
+.check-menu{
+    display: none;
+}
+
+.label-check{
+    display: none;
+}
+
+/*Estilos container2*/
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    background-image: url(../assets/pranav-kumar-jain-PR_0IPlMXgk-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container2 h1{
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.container2 p{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.texto{
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid white;
+    padding: 40px;
+}
+
+
+/*Estilos container3*/
+
+.container3{
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.texto-agencia{
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+    width:40%;
+    height: 100%;
+    margin: 10px 90px;
+    padding: 20px;
+}
+
+.texto-agencia h2{
+    font-size: 2.5rem;
+}
+
+.texto-agencia p{
+    font-size: 1.3rem;
+}
+
+.enlace-beeagency{
+    color: rgb(77, 77, 182);
+}
+
+.enlace-beeagency:hover{
+    font-size: 1.4rem;
+}
+
+.button-sobre{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 400px;
+    margin: 10px 90px;
+}
+
+.sobre{
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+/*Estilos media*/
+@media (max-width: 768px){
+    .label-check{
+        display: block;
+    }
+
+    .menu li a{
+        color: white;
+    }
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        border: none;
+        border-radius: 0px;
+        text-align: center;
+        animation: rebote-menu 0.6s ease-out;
+    }
+
+    .submenu{
+        background-color: black;
+    }
+
+
+
+    .check-menu:checked + .menu{
+        display: flex;
+    }
+
+    .texto{
+        max-width: 400px;
+    } 
+    
+    .texto h1{
+        align-items: center;
+        font-size: 2.7rem;
+    }
+
+    .texto p{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .container3{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .texto-agencia{
+        text-align: center;
+        width: 100%;
+    }
+
+    .button-sobre{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+/*Estilos animaciones*/
+@keyframes rebote-menu{
+
+    0% {
+      transform: translateX(-250px);
+    }
+    60% {
+      transform: translateX(20px);
+     }
+    80% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+    
+}
